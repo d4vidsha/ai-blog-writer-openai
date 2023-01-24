@@ -1,6 +1,8 @@
-##OPEN API STUFF
-OPENAI_API_KEY = 'enter-api-key'
+from modules.store_client import *
+store = StoreClient("bad79293-00b7-4e71-b0d7-4607b18c855f")
 
+## OPENAI STUFF
+OPENAI_API_KEY = store.get("OpenAI-API-key")
 
 
 ## FLASK STUFF
@@ -9,7 +11,7 @@ class Config(object):
     TESTING = False
 
 class DevelopmentConfig(Config):
-    SECRET_KEY = "this-is-a-super-secret-key"
+    SECRET_KEY = "3kjlqhfejakdlbiodfsafenwavcxozkhdsaq"
 
 
 config = {
